@@ -1,9 +1,10 @@
-import Head from 'next/head'
-import Image from 'next/image'
-import { Inter } from 'next/font/google'
-import styles from '@/styles/Home.module.css'
+import Head from "next/head";
+import Image from "next/image";
+import { Poppins, Roboto_Mono } from "next/font/google";
+import styles from "@/styles/Home.module.css";
 
-const inter = Inter({ subsets: ['latin'] })
+const poppins = Poppins({ subsets: ["latin"], weight: ["700"] });
+const roboto = Roboto_Mono({ subsets: ["latin"], weight: ["400"] });
 
 export default function Home() {
   return (
@@ -14,101 +15,224 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <main className={styles.main}>
-        <div className={styles.description}>
-          <p>
-            Get started by editing&nbsp;
-            <code className={styles.code}>pages/index.js</code>
-          </p>
-          <div>
-            <a
-              href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              By{' '}
-              <Image
-                src="/vercel.svg"
-                alt="Vercel Logo"
-                className={styles.vercelLogo}
-                width={100}
-                height={24}
-                priority
+      <main className={roboto.className}>
+        <header>
+          <svg
+            width="90"
+            height="90"
+            viewBox="0 0 90 90"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <g>
+              <circle cx="44.5562" cy="44.5562" r="44.5562" fill="#1BF550" />
+              <path
+                d="M51.071 15.8421C50.5547 15.7256 50.1109 15.5374 49.7397 15.2775C49.3685 15.0176 49.0959 14.6953 48.9219 14.3108C48.7546 13.9277 48.7165 13.5033 48.8074 13.0376L50.6381 13.4506C50.6059 13.7182 50.6511 13.9398 50.7735 14.1154C50.8975 14.2843 51.0835 14.3968 51.3317 14.4528C51.5865 14.5102 51.8005 14.4986 51.9737 14.4179C52.1485 14.3305 52.2593 14.1829 52.3062 13.975C52.3456 13.8006 52.3177 13.6428 52.2228 13.5016C52.1345 13.3619 52.0115 13.2355 51.8538 13.1224C51.7028 13.0108 51.4803 12.8725 51.1863 12.7075C50.7621 12.4638 50.4217 12.239 50.1651 12.0332C49.9085 11.8273 49.7073 11.5634 49.5615 11.2416C49.4156 10.9198 49.3926 10.5376 49.4925 10.095C49.6408 9.43781 49.9945 8.97853 50.5539 8.71713C51.1147 8.44903 51.7773 8.40122 52.5418 8.57369C53.3197 8.74919 53.9043 9.07841 54.2957 9.56135C54.6886 10.0376 54.8269 10.6114 54.7106 11.2828L52.8498 10.863C52.8878 10.632 52.8441 10.4354 52.7186 10.2732C52.5946 10.1043 52.4119 9.99257 52.1705 9.9381C51.9627 9.8912 51.7822 9.91038 51.629 9.99563C51.4774 10.0742 51.3782 10.2174 51.3312 10.4253C51.2798 10.6533 51.347 10.8552 51.5328 11.031C51.7187 11.2068 52.023 11.4199 52.4457 11.6703C52.8669 11.9274 53.2024 12.1582 53.4523 12.3625C53.7088 12.5684 53.9108 12.8289 54.0582 13.1441C54.2055 13.4592 54.2315 13.828 54.1362 14.2504C54.0455 14.6528 53.8591 14.9948 53.577 15.2765C53.3017 15.5597 52.9477 15.7546 52.5149 15.8613C52.0821 15.9681 51.6008 15.9617 51.071 15.8421Z"
+                fill="#242B53"
               />
+              <path
+                d="M32.802 17.5769L34.3811 16.7923L31.1604 10.3097L29.5813 11.0942L31.577 15.1112L26.9402 12.4064L25.3611 13.1909L28.5818 19.6735L30.1609 18.889L28.1744 14.8905L32.802 17.5769Z"
+                fill="#242B53"
+              />
+              <path
+                d="M20.4599 20.0939C20.1948 20.0257 19.9327 20.04 19.6735 20.137C19.414 20.2242 19.1719 20.3886 18.9472 20.6302C18.5586 21.048 18.3857 21.5115 18.4284 22.0206C18.4661 22.5251 18.714 22.9904 19.1721 23.4165C19.6603 23.8706 20.1646 24.0956 20.6849 24.0913C21.2048 24.0774 21.6802 23.8388 22.1109 23.3758C22.4059 23.0586 22.5735 22.717 22.6137 22.3507C22.6586 21.9794 22.5769 21.603 22.3685 21.2214L20.8446 22.8598L19.8933 21.9749L22.5057 19.1662L23.7062 20.2829C23.9394 20.6781 24.0868 21.1203 24.1482 21.6093C24.2144 22.0933 24.1692 22.5911 24.0126 23.1026C23.856 23.6142 23.5717 24.0914 23.1597 24.5343C22.6728 25.0578 22.1241 25.4206 21.5137 25.6227C20.9029 25.815 20.286 25.8373 19.6629 25.6897C19.0445 25.5369 18.4736 25.2171 17.9501 24.7302C17.4266 24.2433 17.0664 23.697 16.8693 23.0912C16.672 22.4758 16.6496 21.8589 16.8023 21.2405C16.95 20.6174 17.2673 20.0441 17.7543 19.5206C18.3442 18.8864 18.994 18.4956 19.7036 18.3484C20.418 18.196 21.1125 18.3022 21.7873 18.6669L20.4599 20.0939Z"
+                fill="#242B53"
+              />
+              <path
+                d="M18.6312 30.7913L12.1599 27.5477L11.3698 29.124L17.8411 32.3676L18.6312 30.7913Z"
+                fill="#242B53"
+              />
+              <path
+                d="M15.8095 38.9947C15.7048 39.5136 15.5268 39.9615 15.2754 40.3386C15.024 40.7157 14.7081 40.9956 14.3276 41.1783C13.9485 41.3543 13.5251 41.4022 13.0574 41.3219L13.4285 39.4822C13.6967 39.5083 13.9172 39.4581 14.09 39.3316C14.256 39.2038 14.3642 39.0153 14.4145 38.7659C14.4661 38.5099 14.4496 38.2962 14.365 38.1248C14.2736 37.9521 14.1234 37.8447 13.9145 37.8025C13.7393 37.7672 13.5822 37.7986 13.4432 37.8968C13.3055 37.9883 13.182 38.1141 13.0725 38.2744C12.9644 38.4279 12.8312 38.6535 12.673 38.9512C12.4391 39.3809 12.2222 39.7263 12.0222 39.9875C11.8223 40.2487 11.5631 40.4559 11.2447 40.6091C10.9262 40.7623 10.5447 40.794 10.0999 40.7043C9.43953 40.5711 8.97228 40.2279 8.69815 39.6747C8.41729 39.1202 8.35433 38.4588 8.50927 37.6906C8.66692 36.9089 8.98268 36.3169 9.45654 35.9146C9.92366 35.5109 10.4942 35.3595 11.1681 35.4604L10.7909 37.3303C10.5591 37.2976 10.3635 37.3458 10.2043 37.475C10.0382 37.6028 9.93074 37.788 9.88181 38.0306C9.83968 38.2395 9.86298 38.4195 9.95171 38.5706C10.0337 38.7204 10.1792 38.8163 10.388 38.8585C10.6172 38.9047 10.8175 38.8329 10.989 38.6431C11.1605 38.4533 11.3666 38.1442 11.6073 37.7159C11.8547 37.2889 12.0777 36.9482 12.2763 36.6937C12.4763 36.4325 12.7321 36.2246 13.0437 36.0701C13.3554 35.9156 13.7235 35.8811 14.1481 35.9667C14.5524 36.0483 14.8986 36.2268 15.1866 36.5023C15.476 36.771 15.679 37.1205 15.7956 37.5508C15.9122 37.981 15.9168 38.4623 15.8095 38.9947Z"
+                fill="#242B53"
+              />
+              <path
+                d="M11.0621 48.6496L9.60587 48.8024L9.32719 46.1463L7.92224 46.2937L8.3849 50.7034L15.584 49.9481L15.1213 45.5384L13.7164 45.6858L13.9951 48.3419L12.4158 48.5076L12.1694 46.1591L10.8157 46.3012L11.0621 48.6496Z"
+                fill="#242B53"
+              />
+              <path
+                fill-rule="evenodd"
+                clip-rule="evenodd"
+                d="M11.1145 58.4851C11.0755 59.1297 11.2141 59.7993 11.5301 60.4938L12.6534 62.9621L19.2419 59.9639L18.1186 57.4955C17.8054 56.8073 17.393 56.2661 16.8814 55.8721C16.3669 55.4718 15.7953 55.2448 15.1666 55.191C14.5351 55.131 13.8971 55.2476 13.2526 55.5409C12.6019 55.837 12.0949 56.2414 11.7316 56.7542C11.3592 57.2635 11.1535 57.8405 11.1145 58.4851ZM15.6342 57.0401C16.1196 57.227 16.5004 57.624 16.7766 58.2309L17.1225 58.9911L13.2933 60.7337L12.9474 59.9735C12.6712 59.3665 12.6251 58.8173 12.8093 58.3256C12.9934 57.834 13.3889 57.4501 13.9958 57.1739C14.6027 56.8977 15.1489 56.8531 15.6342 57.0401Z"
+                fill="#242B53"
+              />
+              <path
+                fill-rule="evenodd"
+                clip-rule="evenodd"
+                d="M59.2248 18.3245C59.5329 18.8996 59.9729 19.3715 60.5448 19.7404C61.1166 20.1093 61.7251 20.3137 62.3702 20.3535C63.0153 20.3933 63.6293 20.2658 64.2122 19.971C64.7987 19.6704 65.2839 19.2226 65.6677 18.6276C66.0515 18.0326 66.2576 17.4088 66.2858 16.7563C66.3199 16.1074 66.1829 15.4955 65.8748 14.9205C65.5725 14.3492 65.1355 13.8791 64.5636 13.5102C63.9917 13.1413 63.3803 12.9351 62.7294 12.8915C62.0843 12.8517 61.4674 12.9773 60.8788 13.2684C60.296 13.5633 59.8127 14.0082 59.4289 14.6032C59.045 15.1982 58.8371 15.8249 58.8051 16.4832C58.7826 17.1395 58.9225 17.7533 59.2248 18.3245ZM62.8908 18.6524C62.3933 18.7896 61.902 18.7017 61.4167 18.3887C60.9257 18.0719 60.6353 17.6597 60.5457 17.1519C60.4655 16.6421 60.5987 16.1186 60.9452 15.5813C61.2955 15.0383 61.7175 14.7011 62.2113 14.5697C62.7109 14.442 63.2062 14.5366 63.6972 14.8533C64.1824 15.1663 64.4651 15.5777 64.5453 16.0875C64.635 16.5953 64.5065 17.1178 64.16 17.655C63.8172 18.1865 63.3941 18.5189 62.8908 18.6524Z"
+                fill="#242B53"
+              />
+              <path
+                d="M69.4604 22.1799C70.0389 21.7599 70.6443 21.5115 71.2767 21.4347C71.9146 21.3539 72.5202 21.4451 73.0936 21.7084C73.6767 21.9732 74.1741 22.3893 74.5861 22.9567C75.0909 23.6521 75.3394 24.3806 75.3317 25.1423C75.324 25.9039 75.0636 26.5984 74.5506 27.2256L73.4117 25.6569C73.5717 25.3624 73.6369 25.0602 73.6073 24.7504C73.5818 24.4461 73.4701 24.1577 73.2722 23.8851C72.9532 23.4456 72.5417 23.2006 72.0379 23.1502C71.534 23.0997 71.0262 23.2603 70.5144 23.6318C70.0026 24.0033 69.6927 24.4365 69.5846 24.9312C69.4766 25.4259 69.582 25.893 69.9011 26.3324C70.099 26.605 70.3386 26.8006 70.62 26.9191C70.9055 27.0431 71.213 27.0747 71.5426 27.0138L72.6814 28.5826C71.9261 28.8761 71.1852 28.9086 70.4586 28.68C69.7376 28.4474 69.1246 27.9834 68.6198 27.2881C68.2079 26.7207 67.9635 26.1208 67.8867 25.4885C67.8196 24.8576 67.9204 24.2535 68.1893 23.6761C68.4581 23.0986 68.8818 22.5999 69.4604 22.1799Z"
+                fill="#242B53"
+              />
+              <path
+                d="M72.8234 35.3415L79.6395 32.9046L79.0459 31.2443L72.2298 33.6812L72.8234 35.3415Z"
+                fill="#242B53"
+              />
+              <path
+                fill-rule="evenodd"
+                clip-rule="evenodd"
+                d="M75.6109 43.972L75.4522 41.2751L74.1503 40.9179L74.0419 39.0753L81.4219 41.2647L81.5418 43.3028L74.4696 46.3426L74.3599 44.4795L75.6109 43.972ZM76.943 43.4392L79.5358 42.3879L76.8382 41.6584L76.943 43.4392Z"
+                fill="#242B53"
+              />
+              <path
+                d="M74.1488 54.495L74.7297 52.2595L80.4183 53.7379L80.8618 52.0314L73.8559 50.2106L72.8314 54.1527L74.1488 54.495Z"
+                fill="#242B53"
+              />
+              <path
+                d="M68.0529 68.5771C68.4924 69.141 68.7612 69.7376 68.8595 70.367C68.962 71.0018 68.8914 71.6102 68.6478 72.1922C68.4029 72.7839 68.004 73.2952 67.4509 73.7262C66.7731 74.2544 66.0535 74.5276 65.2921 74.5458C64.5306 74.564 63.8277 74.3274 63.1833 73.8361L64.7124 72.6445C65.0122 72.7943 65.3164 72.8492 65.625 72.8091C65.9283 72.7733 66.2127 72.6518 66.4784 72.4448C66.9068 72.1109 67.1376 71.6914 67.1709 71.1861C67.2042 70.6809 67.0265 70.1788 66.6377 69.6799C66.249 69.1811 65.8055 68.8861 65.3074 68.7949C64.8093 68.7037 64.3461 68.8251 63.9178 69.1589C63.6521 69.3659 63.4648 69.6121 63.3559 69.8974C63.2417 70.1869 63.2205 70.4953 63.2926 70.8226L61.7635 72.0142C61.4445 71.2693 61.3868 70.5299 61.5905 69.7959C61.7984 69.0674 62.2413 68.4391 62.9191 67.9109C63.4721 67.4799 64.0633 67.2152 64.6927 67.117C65.3209 67.0284 65.9281 67.1086 66.5143 67.3576C67.1006 67.6067 67.6135 68.0132 68.0529 68.5771Z"
+                fill="#242B53"
+              />
+              <path
+                d="M53.3223 74.4418L55.4928 73.6521L57.5023 79.1754L59.1593 78.5725L56.6844 71.7701L52.8569 73.1627L53.3223 74.4418Z"
+                fill="#242B53"
+              />
+              <path
+                d="M47.7749 81.354L47.5784 77.0276C47.5587 76.595 47.4372 76.2668 47.2137 76.043C46.9902 75.8192 46.6724 75.7166 46.2604 75.7353C45.8484 75.754 45.5378 75.8851 45.3286 76.1286C45.1195 76.372 45.0247 76.7101 45.0444 77.1427L45.2409 81.4691L43.4794 81.5491L43.2834 77.233C43.2541 76.5875 43.3666 76.0353 43.6211 75.5765C43.8755 75.1176 44.231 74.7643 44.6877 74.5165C45.1375 74.269 45.6474 74.1323 46.2174 74.1064C46.7874 74.0805 47.304 74.1671 47.7672 74.3663C48.2238 74.5726 48.5928 74.8931 48.874 75.3276C49.1555 75.769 49.311 76.3124 49.3403 76.9579L49.5363 81.274L47.7749 81.354Z"
+                fill="#242B53"
+              />
+              <path
+                fill-rule="evenodd"
+                clip-rule="evenodd"
+                d="M33.0353 75.232C33.186 75.6205 33.4498 75.9168 33.8268 76.1211C33.4396 76.1216 33.1007 76.226 32.81 76.4341C32.5127 76.6403 32.3038 76.9479 32.1833 77.3567C32.0201 77.9106 32.0919 78.4083 32.3989 78.85C32.6993 79.2897 33.2023 79.6135 33.9078 79.8215L37.0333 80.7427L39.0798 73.7994L35.8456 72.8461C35.1202 72.6323 34.5069 72.6343 34.0056 72.852C33.4957 73.0744 33.1552 73.4757 32.9842 74.056C32.8657 74.4582 32.8827 74.8502 33.0353 75.232ZM35.0622 77.1087L36.1699 77.4352L35.7414 78.8892L34.6336 78.5626C34.3567 78.481 34.1641 78.3562 34.056 78.1881C33.9413 78.0182 33.9189 77.8145 33.9889 77.5771C34.0588 77.3397 34.1881 77.1807 34.3767 77.1002C34.5567 77.0242 34.7852 77.0271 35.0622 77.1087ZM35.0318 74.294C35.2204 74.2134 35.4564 74.2149 35.74 74.2985L36.9862 74.6658L36.5343 76.1989L35.3079 75.8374C35.0244 75.7538 34.8239 75.6195 34.7064 75.4343C34.5824 75.2473 34.5563 75.0318 34.6283 74.7878C34.7002 74.5438 34.8347 74.3792 35.0318 74.294Z"
+                fill="#242B53"
+              />
+              <animateTransform
+                attributeName="transform"
+                attributeType="XML"
+                dur="40s"
+                keyTimes="0;1"
+                repeatCount="indefinite"
+                type="rotate"
+                values="0;360"
+                calcMode="linear"
+              ></animateTransform>
+            </g>
+            <g>
+              <path
+                d="M54.6804 34.5524C54.1504 32.5743 52.1241 31.4044 50.146 31.9344C48.168 32.4645 46.9981 34.4908 47.5281 36.4688C48.0581 38.4469 50.0844 39.6168 52.0625 39.0868C54.0406 38.5568 55.2105 36.5304 54.6804 34.5524Z"
+                fill="#242B53"
+              />
+              <path
+                d="M36.7996 39.3435C36.2695 37.3655 34.2432 36.1956 32.2651 36.7256C30.2871 37.2556 29.1172 39.2819 29.6472 41.26C30.1772 43.2381 32.2035 44.408 34.1816 43.878C36.1597 43.3479 37.3296 41.3216 36.7996 39.3435Z"
+                fill="#242B53"
+              />
+              <path
+                d="M47.9132 59.3633C52.8863 58.0307 56.9708 54.5886 59.1317 49.9131C60.1523 47.6873 56.7811 46.1471 55.7687 48.3588C54.0679 52.0246 50.8634 54.7278 46.952 55.7759C43.0406 56.824 38.9168 56.0963 35.608 53.7608C33.603 52.3577 31.4647 55.3741 33.4727 56.7885C37.6818 59.7571 42.9401 60.6958 47.9132 59.3633Z"
+                fill="#242B53"
+              />
+            </g>
+          </svg>
+
+          <h2 className={poppins.className}>
+            Designers ajudando a fazer um mundo melhor.
+          </h2>
+          <p>Vamos juntar designers com projetos reais de impacto social.</p>
+        </header>
+        <article>
+          <h1 className={poppins.className}>
+            O mundo não precisa de mais um redesign da interface do Netflix.
+          </h1>
+          <p>
+            Muitos designers em início de carreira, em busca de material para
+            colocar em seus portfólios, acabam caindo na armadilha de fazer
+            projetos onde o alvo é o design já existente de uma marca
+            consolidada: Uma nova versão da interface da Netflix, da marca do
+            McDonalds, do poster do filme da Marvel… Ainda que projetos “falsos”
+            sejam uma ferramenta muito boa para que designers gerem seus
+            portfólios, esse tipo de iniciativa gera alguns problemas.
+          </p>
+          <p>
+            O primeiro é que fazer um projeto onde não existe a real inteção de
+            produzí-lo de fato, tira boa parte dos fatores que julgam o que
+            torna um design bom ou não. Redesenhar a interface de um app, pelo
+            simples fato do redesign, é sem propósito: Quais os objetivos? Como
+            medir os resultados? Quais eram as restrições?
+          </p>
+          <p>
+            Além disso, no fim das contas, mesmo com o melhor dos projetos,
+            designers vão estar trabalhando de graça para empresas que tem
+            milhões/bilhões de dólares.
+          </p>
+          <h2 className={poppins.className}>
+            O design pode ajudar a mudar o mundo.
+          </h2>
+          <p>
+            A verdade é que o trabalho de design é muito importante, e tem muita
+            gente que realmente precisa dele. Instituições sem fins lucrativos
+            precisando de uma nova marca ou um site, grupos marginalizados
+            produzindo conteúdo que poderia ter seu layout melhorado, eventos
+            que precisam de alguma divulgação melhor em redes sociais… Existem
+            inúmeros projetos de design que estão pedindo para serem iniciados.
+          </p>
+          <h2 className={poppins.className}>O projeto</h2>
+          <p>
+            A ideia com o “Design Social Club” é juntar designers com
+            instituições/eventos/iniciativas sem fins lucrativos, de forma que
+            ambos se ajudem mutualmente. Projetos de diferentes formatos podem
+            surgir dessa ajuda: Novas marcas, sites, aplicativos, identidades
+            para redes sociais. Permitir que designers ajudem a criar algo que
+            vai ter um impacto verdadeiro.
+          </p>
+          <h2 className={poppins.className}>Qual a vantagem pros designers?</h2>
+          <p>
+            Ao invés de trabalhar de graça para um projeto completamente
+            fictício, trabalhar de graça para um projeto real permite que eles
+            entendam todo o processo do design: Análise de requisitos e
+            restrições, aprovações com clientes, métricas de pós-lançamento,
+            resultados… Mais do que simplesmete algo bonito para ter no
+            portfólio, um projeto real permite que designers tenham realmente
+            sobre o que falar ao apresentar seus trabalhos.
+          </p>
+          <h2 className={poppins.className}>
+            Qual a vantagem pras instituições/eventos/iniciativas?
+          </h2>
+          <p>
+            Ter um olhar de design sobre seu material sempre é útil. Ter acesso
+            a jovens designers com energia, tempo e vontade para ajudar no
+            projeto pode tornar seu alcance ainda maior, ao mesmo tempo que
+            ajuda com a formação de novos profissionais dessa área.
+          </p>
+          <h2 className={poppins.className}>Próximos passos</h2>
+          <p>
+            Para poder começar esse “clube”, precisamos primeiro ter contato com
+            essas instuições e organizações, para fazer uma lista que
+            futuramente será disponibilizada para que os designers possam
+            procurar e entrar em contato. Se você faz parte de alguma dessas
+            instituições sem fins lucrativos, ou conhece alguma organização que
+            possa se interessar por essa iniciativa, por favor entre em contato
+            com:{" "}
+            <a href="mailto:meuprojeto@designsocial.club">
+              meuprojeto@designsocial.club
             </a>
-          </div>
-        </div>
-
-        <div className={styles.center}>
-          <Image
-            className={styles.logo}
-            src="/next.svg"
-            alt="Next.js Logo"
-            width={180}
-            height={37}
-            priority
-          />
-        </div>
-
-        <div className={styles.grid}>
-          <a
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-            className={styles.card}
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <h2 className={inter.className}>
-              Docs <span>-&gt;</span>
-            </h2>
-            <p className={inter.className}>
-              Find in-depth information about Next.js features and&nbsp;API.
-            </p>
-          </a>
-
-          <a
-            href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-            className={styles.card}
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <h2 className={inter.className}>
-              Learn <span>-&gt;</span>
-            </h2>
-            <p className={inter.className}>
-              Learn about Next.js in an interactive course with&nbsp;quizzes!
-            </p>
-          </a>
-
-          <a
-            href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-            className={styles.card}
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <h2 className={inter.className}>
-              Templates <span>-&gt;</span>
-            </h2>
-            <p className={inter.className}>
-              Discover and deploy boilerplate example Next.js&nbsp;projects.
-            </p>
-          </a>
-
-          <a
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-            className={styles.card}
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <h2 className={inter.className}>
-              Deploy <span>-&gt;</span>
-            </h2>
-            <p className={inter.className}>
-              Instantly deploy your Next.js site to a shareable URL
-              with&nbsp;Vercel.
-            </p>
-          </a>
-        </div>
+            . No final desta página tem um formulário, caso isso facilite a
+            entrega da informação. :)
+          </p>
+          <p>
+            Assim que tivermos um número inicial de projetos, a ideia será
+            disponibilizá-los numa plataforma, onde os designers poderão
+            pesquisar e entrar em contato com essas iniciativas e organizações.
+          </p>
+          <h2 className={poppins.className}>Com cuidado</h2>
+          <p>
+            A intenção do clube é permitir o contato entre os designers e as
+            empresas, mas vamos ter cuidado para que não hajam abusos de nenhum
+            dos lados. A intenção é que seja uma relação realmente colaborativa,
+            e não um cenário onde o designer se sinta explorado, nem a
+            instituição se sinta lesada de alguma forma. A única intenção com o
+            projeto é criar parcerias.
+          </p>
+          <h2 className={poppins.className}>Um clube aberto</h2>
+          <p>
+            A ideia é essa: Um clube aberto para que designers e iniciativas que
+            querem criar um impacto no mundo se ajudem. E isso é apenas o
+            primeiro, pequeno passo nessa direção. Se alguém quer ajudar a
+            direcionar o caminho desta iniciativa, estamos ouvindo em:
+            contato@designsocial.club
+          </p>
+        </article>
       </main>
     </>
-  )
+  );
 }
