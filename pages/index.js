@@ -141,13 +141,15 @@ export default function Home() {
             <a href="mailto:meuprojeto@designsocial.club">
               meuprojeto@designsocial.club
             </a>
-            . No final desta página tem um formulário, caso isso facilite a
-            entrega da informação. :)
+            .
           </p>
           <p>
             Assim que tivermos um número inicial de projetos, a ideia será
             disponibilizá-los numa plataforma, onde os designers poderão
-            pesquisar e entrar em contato com essas iniciativas e organizações.
+            pesquisar e entrar em contato com essas iniciativas e organizações. Se você é designer e quer se cadsatrar, ou dar alguma opinião sobre o projeto, entre em contato pelo e-mail:  
+            <a href="mailto:contato@designsocial.club">
+              contato@designsocial.club
+            </a>.
           </p>
           <h2 className={poppins.className}>Com cuidado</h2>
           <p>
@@ -163,7 +165,7 @@ export default function Home() {
             A ideia é essa: Um clube aberto para que designers e iniciativas que
             querem criar um impacto no mundo se ajudem. E isso é apenas o
             primeiro, pequeno passo nessa direção. Se alguém quer ajudar a
-            direcionar o caminho desta iniciativa, estamos ouvindo em:
+            direcionar o caminho desta iniciativa, estamos ouvindo em: 
             <a href="mailto:contato@designsocial.club">
               contato@designsocial.club
             </a>

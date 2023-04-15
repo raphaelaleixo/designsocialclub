@@ -32,6 +32,8 @@ header svg {
   width: 8em;
   height: 8em;
   margin-bottom: 3em;
+  position: fixed;
+  top: 3em;
 }
 
 header svg g:first-child {
@@ -39,6 +41,7 @@ header svg g:first-child {
 }
 
 header h2 {
+  margin-top: 14rem;
   font-size: 4.5em;
   line-height: 110%;
 }
@@ -50,7 +53,7 @@ main {
 
 article {
   max-width: 60ch;
-  margin: 0 auto;
+  margin: 0 auto 8em;
 }
 article h1, article h2 {
   line-height: 110%;
@@ -79,5 +82,26 @@ a {
   }
   to {
     transform: rotate(360deg);
+  }
+}
+
+@media screen and (max-width: 768px) {
+  header {
+    margin-bottom: 3em;
+  }
+  header h2 {
+    font-size: 2.5em;
+    margin-top: 11rem;
+  }
+  header p {
+    font-size: 1em;
+  }
+  article h1, article h2 {
+    font-size: 1.75em;
+  }
+  header svg {
+    width: 5em;
+    height: 5em;
+    margin-bottom: 3em;
   }
 }
