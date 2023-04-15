@@ -25,7 +25,7 @@ export default function Home() {
           property="og:description"
           content="Vamos juntar designers em início de carreira com projetos reais de impacto social."
         />
-        <meta property="og:image" content="https://designsocial.club/social.jpg" />
+        <meta property="og:image" content="https://designsocial.club/social.png" />
         <meta property="twitter:card" content="summary_large_image" />
         <meta property="twitter:url" content="https://designsocial.club/" />
         <meta property="twitter:title" content="Design Social Club" />
@@ -33,7 +33,7 @@ export default function Home() {
           property="twitter:description"
           content="Vamos juntar designers em início de carreira com projetos reais de impacto social."
         />
-        <meta property="twitter:image" content="https://designsocial.club/social.jpg" />
+        <meta property="twitter:image" content="https://designsocial.club/social.png" />
         <meta name="description" content="Vamos juntar designers em início de carreira com projetos reais de impacto social." />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link
