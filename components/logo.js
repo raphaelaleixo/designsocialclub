@@ -11,7 +11,7 @@ const Logo = () => {
       >
         <title id="logoTitle">Design Social Club</title>
         <desc id="logoDesc">
-          O texto "Design Social Club" escrito num círculo, e um ícone de um
+          O texto &ldquo;Design Social Club&rdquo; escrito num círculo, e um ícone de um
           sorriso no meio.
         </desc>
         <g>
