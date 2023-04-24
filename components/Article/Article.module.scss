@@ -1,0 +1,16 @@
+.article {
+    font-family: var(--roboto-font);
+    max-width: 60ch;
+    margin: 0 auto;
+   h2, h3 {
+    font-family: var(--poppins-font);
+    margin: 0 0 0.5em;
+   }
+   p {
+    margin: 0 0 1em;
+   }
+}
+
+.articleList {
+    columns: 3;
+}

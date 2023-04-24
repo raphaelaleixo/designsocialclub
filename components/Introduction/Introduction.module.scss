@@ -1,0 +1,18 @@
+.introduction {
+    columns: 2;
+    gap: 1.5em;
+    font-family: var(--roboto-font);
+    p {
+        margin: 0 0 1.5em;
+    }
+    h2 {
+        font-family: var(--poppins-font);
+        margin: 3rem 0;
+        column-span: all;
+        line-height: 110%;
+        text-align: center;
+    }
+    @media screen and (max-width: 768px) {
+        columns: 1;
+    }
+}

@@ -1,0 +1,40 @@
+.card {
+  font-family: var(--roboto-font);
+  display: block;
+  padding: 1em;
+  color: inherit;
+  border: 1px dashed var(--fg-color);
+  break-inside: avoid;
+  margin-bottom: 2em;
+  text-decoration: none;
+  transition: background-color 0.3s ease-out;
+  h3 {
+    font-size: 1em;
+    line-height: 1.4;
+    margin-bottom: 0.5em;
+    font-family: var(--poppins-font);
+  }
+  p {
+    font-size: 0.875em;
+    margin-bottom: 1em;
+  }
+  &:hover {
+    background: #14193799;
+  }
+}
+
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  color: var(--accent-color);
+  font-size: 0.75rem;
+  gap: 0.5em;
+  & > span {
+    text-transform: lowercase;
+    padding: 0em 0.4em 0.1em;
+    background: var(--action-color);
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+}

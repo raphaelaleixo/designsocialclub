@@ -1,0 +1,31 @@
+.header {
+  margin: 10em 0 3em;
+  max-width: 75%;
+  font-family: var(--roboto-font);
+  h1 {
+    font-family: var(--poppins-font);
+    line-height: 110%;
+    font-size: 3em;
+  }
+  nav {
+    display: flex;
+    margin: 0 0 0.5em;
+    a {
+      display: block;
+      font-weight: bolder;
+      &:after {
+        content: '/';
+        display: inline-block;
+        text-decoration: none;
+        color: var(--fg-color);
+        margin: 0 0.5em;
+      }
+    }
+  }
+  @media screen and (max-width: 768px) {
+    max-width: 100%;
+    h1 {
+      font-size: 2.5em;
+    }
+  }
+}

@@ -1,0 +1,27 @@
+.howItWorks {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5em;
+  font-family: var(--roboto-font);
+  & > div {
+    width: calc(50% - 0.75em);
+  }
+  ol {
+    padding-left: 2em;
+    margin: 1em 0;
+  }
+  h2 {
+    font-family: var(--poppins-font);
+    font-size: 1.25em;
+    line-height: 1.4;
+    margin: 0 0 0.5rem;
+  }
+  p {
+    margin: 0 0 1em;
+  }
+  @media screen and (max-width: 768px) {
+    & > div {
+      width: 100%;
+    }
+  }
+}

@@ -1,0 +1,53 @@
+.list {
+  font-family: var(--roboto-font);
+  margin-bottom: 3em;
+  h2,
+  h3 {
+    font-family: var(--poppins-font);
+    line-height: 120%;
+    max-width: 50ch;
+  }
+  h2 {
+    font-size: 1.5em;
+  }
+  & > div:nth-child(2) > p {
+    margin-top: 1em;
+    margin-bottom: 2rem;
+    max-width: 50ch;
+  }
+  & > div:last-child {
+    columns: 3;
+    gap: 2em;
+  }
+  @media screen and (max-width: 1024px) {
+    & > div:last-child {
+      columns: 2;
+    }
+  }
+  @media screen and (max-width: 768px) {
+    & > div:last-child {
+      columns: 1;
+    }
+  }
+}
+
+.atados {
+  display: flex;
+  flex-direction: column;
+  text-decoration: none;
+  break-inside: avoid;
+  gap: 0.5em;
+  font-size: 0.875em;
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+.error {
+  break-inside: avoid;
+  color: var(--accent-color);
+  background: #992631;
+  padding: 0.5em 1em;
+  font-size: 0.75em;
+  columns: 1 !important;
+}
