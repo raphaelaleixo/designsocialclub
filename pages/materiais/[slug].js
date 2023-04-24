@@ -12,7 +12,7 @@ export async function getStaticPaths() {
   return {
     paths: data.allArticles
       ? data.allArticles.map((post) => `/materiais/${post.slug}`)
-      : [],
+      : [null],
     fallback: false,
   };
 }
