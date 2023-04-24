@@ -10,7 +10,9 @@ export async function getStaticPaths() {
   const data = await getAllArticleSlugs();
 
   return {
-    paths: data.allArticles.map((post) => `/materiais/${post.slug}`),
+    paths: data.allArticles
+      ? data.allArticles.map((post) => `/materiais/${post.slug}`)
+      : [],
     fallback: false,
   };
 }
