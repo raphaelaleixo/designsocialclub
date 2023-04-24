@@ -41,8 +41,6 @@ const NGOListGroup = ({ data }) => {
     fetchList();
   }, [data.ngoListType]);
 
-  console.log(error);
-
   return (
     <article className={styles.list}>
       <h2>{data.ngoListTitle}</h2>

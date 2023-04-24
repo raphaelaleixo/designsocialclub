@@ -8,7 +8,6 @@ import Footer from "@/components/Footer/Footer";
 
 export async function getStaticPaths() {
   const data = await getAllArticleSlugs();
-  console.log(data);
 
   return {
     paths: data.allArticles.map((post) => `/materiais/${post.slug}`),
