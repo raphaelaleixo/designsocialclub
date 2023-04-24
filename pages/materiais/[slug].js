@@ -34,7 +34,10 @@ const roboto = Roboto_Mono({
 export default function Home({ article }) {
   return (
     <>
-      <Head>{renderMetaTags(article.seometa)}</Head>
+      <Head>
+        <title>{article.title}</title>
+        {renderMetaTags(article.seometa)}
+      </Head>
       <main className={`${poppins.variable} ${roboto.variable}`}>
         <Header
           isBlogPost

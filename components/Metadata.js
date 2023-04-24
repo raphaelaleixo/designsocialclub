@@ -1,7 +1,6 @@
-import Head from "next/head";
-const Metadata = () => {
-  <Head>
-    <title>Design Social Club :)</title>
+const Metadata = () => (
+  <>
+    <title>Design Social Club</title>
     <meta name="msapplication-TileColor" content="#2d89ef" />
     <meta name="theme-color" content="#242B53" />
     <meta name="apple-mobile-web-app-title" content="Design Social Club" />
@@ -38,7 +37,7 @@ const Metadata = () => {
     <link rel="manifest" href="/site.webmanifest" />
     <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#242B53" />
     <meta name="msapplication-TileColor" content="#242B53" />
-  </Head>;
-};
+  </>
+);
 
 export default Metadata;

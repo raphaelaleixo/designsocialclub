@@ -4,11 +4,9 @@ import Introduction from "@/components/Introduction/Introduction";
 import Header from "@/components/Header/Header";
 import NGOList from "@/components/NGOList/NGOList";
 import { getHomeData } from "@/lib/api";
-import Section from "@/components/Section/Section";
-import Link from "next/link";
-import Card from "@/components/Card/Card";
 import ArticleList from "@/components/Article/ArticleList";
 import Footer from "@/components/Footer/Footer";
+import Head from "next/head";
 
 const poppins = Poppins({
   subsets: ["latin"],
@@ -29,7 +27,9 @@ export async function getStaticProps() {
 export default function Home({ home, articles }) {
   return (
     <>
-      <Metadata />
+      <Head>
+        <Metadata />
+      </Head>
       <main className={`${poppins.variable} ${roboto.variable}`}>
         <Header data={home.valueProposition[0]} />
         <Introduction data={home.introduction[0]} />
