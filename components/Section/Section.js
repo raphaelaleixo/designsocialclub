@@ -19,7 +19,7 @@ const Section = ({ children, title }) => {
       </h1>
       <div
         style={{
-          maxHeight: isClosed ? 0 : "3500px",
+          maxHeight: isClosed ? 0 : "5000px",
           paddingBottom: isClosed ? 0 : "5em",
         }}
       >

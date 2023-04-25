@@ -47,8 +47,8 @@ const NGOListGroup = ({ data }) => {
       <div dangerouslySetInnerHTML={{ __html: data.ngoListIntro }}></div>
       {error.includes(data.ngoListType) ? (
         <div className={styles.error}>
-          Houve um erro ao buscar os dados do Atados. Por favor, acesse
-          diretamente o <a href="https://atados.com.br" target="_blank">site da plataforma</a> para mais informações.
+          Houve um erro ao acessar os dados. Por favor, acesse
+          diretamente o <a href="https://atados.com.br" target="_blank">site da Atados</a> para mais informações.
         </div>
       ) : (
         <div>

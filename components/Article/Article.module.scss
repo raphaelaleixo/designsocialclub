@@ -1,16 +1,37 @@
 .article {
-    font-family: var(--roboto-font);
-    max-width: 60ch;
-    margin: 0 auto;
-   h2, h3 {
+  font-family: var(--roboto-font);
+  max-width: 60ch;
+  margin: 0 auto;
+  h2,
+  h3 {
     font-family: var(--poppins-font);
     margin: 0 0 0.5em;
-   }
-   p {
+  }
+  p {
     margin: 0 0 1em;
-   }
+  }
+}
+
+.intro {
+  font-family: var(--roboto-font);
+  h2, p {
+    max-width: 50ch;
+  }
+  h2 {
+    font-family: var(--poppins-font);
+    line-height: 1.2;
+  }
+  p {
+    margin: 1em 0 2em;
+  }
 }
 
 .articleList {
-    columns: 3;
+  columns: 3;
+  @media screen and (max-width: 1024px) {
+    columns: 2;
+  }
+  @media screen and (max-width: 768px) {
+    columns: 1;
+  }
 }
