@@ -14,7 +14,7 @@ const poppins = Poppins({
 });
 const roboto = Roboto_Mono({
   subsets: ["latin"],
-  weight: ["300", "700"],
+  weight: ["400", "700"],
   variable: "--roboto-font",
 });
 
