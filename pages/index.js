@@ -6,6 +6,7 @@ import { getHomeData } from "@/lib/api";
 import ArticleList from "@/components/Article/ArticleList";
 import Footer from "@/components/Footer/Footer";
 import Head from "next/head";
+import Mentoring from "@/components/Mentoring/Mentoring";
 
 const poppins = Poppins({
   subsets: ["latin"],
@@ -87,6 +88,7 @@ export default function Home({ home, articles }) {
         <Introduction data={home.introduction[0]} />
         <NGOList data={home.ngoList[0]} />
         <ArticleList articles={articles} />
+        <Mentoring />
         <Footer />
       </main>
     </>

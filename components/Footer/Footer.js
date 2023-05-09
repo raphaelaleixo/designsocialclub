@@ -10,6 +10,7 @@ const Footer = () => {
         </a>
         .
       </p>
+      <p>Se preferir, fale com a gente no <a href="https://twitter.com/designsocialclu">Twitter</a> também.</p>
     </footer>
   );
 };
