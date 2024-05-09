@@ -59,7 +59,7 @@ const NGOListGroup = ({ data }) => {
               link={`${linkURLs[data.ngoListType]}${item.slug}`}
               introduction={item.description}
               title={item.organization ? item.organization.name : item.name}
-              tags={item.causes.map((cause) => cause.name)}
+              tags={item.causes?.map((cause) => cause.name)}
             />
           ))}
           <a
