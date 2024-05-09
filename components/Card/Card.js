@@ -12,9 +12,9 @@ const Card = ({ isInternalLink, link, title, introduction, tags }) => {
       <h3>{title}</h3>
       <p>{introduction}</p>
       <div className={styles.tags}>
-        {tags.map((tag) => (
+        {tags ? tags.map((tag) => (
           <span key={tag}>{tag}</span>
-        ))}
+        )) : false}
       </div>
     </LinKComponent>
   );

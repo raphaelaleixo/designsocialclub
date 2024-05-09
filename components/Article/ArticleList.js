@@ -19,7 +19,7 @@ const ArticleList = ({ articles }) => {
         </p>
       </div>
       <div className={styles.articleList}>
-        {articles.map((article) => {
+        {articles ? articles.map((article) => {
           const isBlogPost = article.articleType === "article";
           return (
             <Card
@@ -31,7 +31,7 @@ const ArticleList = ({ articles }) => {
               tags={[isBlogPost ? "Blog" : "Link externo"]}
             />
           );
-        })}
+        }) : false }
       </div>
     </Section>
   );
