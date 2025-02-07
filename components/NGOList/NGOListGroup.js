@@ -3,9 +3,10 @@ import styles from "./NGOList.module.scss";
 import Image from "next/image";
 import Card from "../Card/Card";
 
+
 const requestURLs = {
   openings:
-    "https://v2.api.atados.com.br/project/list?limit=5&closed=false&ordering=-published,closed,-published_date&published=true&search=Design",
+    "https://v2.api.atados.com.br/organization/list?limit=5&ordering=-published,-published_date&paused=false&published=true&search=Design",
   ongs: "https://v2.api.atados.com.br/organization/list?limit=5&ordering=-published,-published_date&published=true",
 };
 
@@ -52,7 +53,7 @@ const NGOListGroup = ({ data }) => {
         </div>
       ) : (
         <div>
-          {list.map((item) => (
+          {list?.map((item) => (
             <Card
               key={item.id}
               isInternalLink
