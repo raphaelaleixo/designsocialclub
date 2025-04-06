@@ -1,8 +1,15 @@
 import Link from "next/link";
 import styles from "./Card.module.scss";
 
-const Card = ({ isInternalLink, link, title, introduction, cityState }) => {
-	const LinkComponent = isInternalLink ? Link : "a";
+const Card = ({
+	isInternalLink,
+	link,
+	title,
+	introduction,
+	tags,
+	cityState,
+}) => {
+	const LinkComponent = !isInternalLink ? Link : "a";
 	return (
 		<LinkComponent
 			className={styles.card}
@@ -12,7 +19,11 @@ const Card = ({ isInternalLink, link, title, introduction, cityState }) => {
 			<h3>{title}</h3>
 			<p>{introduction}</p>
 			<div className={styles.tags}>
-				<span>{cityState}</span>
+				{tags ? (
+					tags.map((tag) => <span key={tag}>{tag}</span>)
+				) : (
+					<span>{cityState}</span>
+				)}
 			</div>
 		</LinkComponent>
 	);
