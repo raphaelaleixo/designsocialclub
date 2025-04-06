@@ -58,7 +58,6 @@ const NGOListGroup = ({ data }) => {
 					{list?.map((item) => (
 						<Card
 							key={item.id}
-							isInternalLink
 							link={`${linkURLs[data.ngoListType]}${item.slug}`}
 							introduction={item.description}
 							title={item.organization ? item.organization.name : item.name}
